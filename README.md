@@ -9,14 +9,14 @@ The key features of this Smart City web-based software are:
 
 ### `run in development` enviroment
 ```
-java -Dspring.profiles.active=dev -jar /software/<your_jar_file>
+java -Dspring.profiles.active=dev -jar /software/smart_city-0.0.1.jar
 ```
 Runs the app in the development mode.
 Open http://localhost:2770 to view it in the browser.
 
 ### `run in production` enviroment
 ```
-java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar /software/<your_jar_file>
+java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar /software/smart_city-0.0.1.jar
 ```
 ## Contianer deployment in heroku
 
