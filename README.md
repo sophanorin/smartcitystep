@@ -4,7 +4,7 @@ This's smart city project in final course of Programming Using Java and Oracle D
 
 ### `run in development` enviroment
 ```
-java -Dspring.profiles.active=dev -Dserver.port=$PORT $JAVA_OPTS -jar /software/<your_jar_file>
+java -Dspring.profiles.active=dev -jar /software/<your_jar_file>
 ```
 Runs the app in the development mode.
 Open http://localhost:2770 to view it in the browser.
