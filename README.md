@@ -1,6 +1,6 @@
 ## Description
 
-This's smart city project in final course of Programming Using Java and Oracle DBMS by Ms. Mithona Kim at IT Academy Step Cambodia .
+This's backend smart city project in final course of Programming Using Java and Oracle DBMS by Ms. Mithona Kim at IT Academy Step Cambodia .
 ### `Key Features`
 The key features of this Smart City web-based software are:
 - Using this project, the details of city can be accessed from anywhere at any time.
