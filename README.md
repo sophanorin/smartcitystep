@@ -15,10 +15,10 @@ java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar /software
 ```
 ## Contianer deployment in heroku
 
-1. docker buildx build --platform linux/amd64 -t <docker_image_name> .
-2. docker tag <docker_image_name> registry.heroku.com/<appName>/web
-3. docker push  registry.heroku.com/<appName>/web
-4. heroku container:release web -a <appName>
+1. docker buildx build --platform linux/amd64 -t docker_image_name .
+2. docker tag docker_image_name registry.heroku.com/appName/web
+3. docker push registry.heroku.com/appName/>/web
+4. heroku container:release web -a appName
 
 ## Postman
   
