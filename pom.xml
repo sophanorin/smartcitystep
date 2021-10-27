@@ -90,6 +90,9 @@
             <plugin>
                 <groupId>com.heroku.sdk</groupId>
                 <version>3.0.3</version>
+                <configuration>
+                    <appName>smartcitystep</appName>
+                </configuration>
                 <artifactId>heroku-maven-plugin</artifactId>
             </plugin>
             <plugin>

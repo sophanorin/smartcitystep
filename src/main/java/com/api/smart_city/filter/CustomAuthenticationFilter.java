@@ -18,6 +18,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.User;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 import javax.servlet.FilterChain;
 import javax.servlet.ServletException;
@@ -66,7 +67,9 @@ public class CustomAuthenticationFilter extends UsernamePasswordAuthenticationFi
            userDTO.getRoles().add(new RoleDTO(role.getId(),role.getName()));
         });
 
-        final String secret = System.getenv("AUTH_SECRET") == null ? "secret" : System.getenv("AUTH_SECRET");
+//        final String secret = System.getenv("AUTH_SECRET") == null ? "secret" : System.getenv("AUTH_SECRET");
+
+        final String secret = "secret";
 
         Algorithm algorithm = Algorithm.HMAC256(secret.getBytes());
         String access_token = JWT.create()

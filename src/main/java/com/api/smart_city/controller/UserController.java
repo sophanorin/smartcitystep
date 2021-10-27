@@ -37,8 +37,15 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/users")
-    public ResponseEntity<List<User>>getUsers() {
-        return ResponseEntity.ok().body(userService.getUsers());
+    public ResponseEntity getUsers() {
+
+        Collection<UserDTO> users = new ArrayList<>();
+
+        userService.getUsers().forEach(user -> {
+            users.add(new UserDTO(user));
+        });
+
+        return ResponseEntity.ok().body(users);
     }
 
     @GetMapping("/user/{userId}")

@@ -4,10 +4,14 @@ package com.api.smart_city.dto.post;
 import com.api.smart_city.model.Category;
 import lombok.Data;
 
+import java.time.LocalDate;
+
 @Data
 public class CategoryDTO {
     private Long id;
     private String category;
+    private LocalDate createdAt;
+    private LocalDate updatedAt;
 
     public CategoryDTO() {
     }
@@ -19,6 +23,8 @@ public class CategoryDTO {
     public CategoryDTO(Category category) {
         this.id = category.getId();
         this.category = category.getCategory();
+        this.createdAt = category.getCreatedAt();
+        this.updatedAt = category.getUpdatedAt();
     }
 
     @Override

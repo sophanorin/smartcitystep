@@ -11,9 +11,10 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 @Configuration
-public class AppConfiguration {
+public class AppConfiguration implements WebMvcConfigurer {
     @Bean
     PasswordEncoder passwordEncoder() {
         return new BCryptPasswordEncoder();
@@ -45,6 +46,15 @@ public class AppConfiguration {
             cityService.saveCity(new City(null,"Koh Kong",null));
             cityService.saveCity(new City(null,"Ta Keo",null));
             cityService.saveCity(new City(null,"Kratie",null));
+            cityService.saveCity(new City(null,"Kampong Speu",null));
+            cityService.saveCity(new City(null,"Mondulkiri",null));
+            cityService.saveCity(new City(null,"Preah Vihear",null));
+            cityService.saveCity(new City(null,"Prey Veng",null));
+            cityService.saveCity(new City(null,"Ratanak Kiri",null));
+            cityService.saveCity(new City(null,"Preah Sihanouk",null));
+            cityService.saveCity(new City(null,"Kep",null));
+            cityService.saveCity(new City(null,"Oddar Meanchey",null));
+            cityService.saveCity(new City(null,"Tboung Khmum",null));
 
             categoryService.saveCategory( new Category(null, "Hotel", null));
             categoryService.saveCategory( new Category(null, "Travel", null));
