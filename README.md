@@ -21,4 +21,5 @@ java -Dspring.profiles.active=prod -Dserver.port=$PORT $JAVA_OPTS -jar /software
 4. heroku container:release web -a <appName>
 
 ## Postman
-Get postman file [here](./postman/SmartCity.postman_collection.json)
+  
+Get postman collection [here](./postman/SmartCity.postman_collection.json)
